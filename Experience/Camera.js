@@ -33,16 +33,23 @@ export default class Camera {
             (this.sizes.aspect * this.sizes.frustrum) / 2,
             this.sizes.frustrum / 2,
             -this.sizes.frustrum / 2,
-            -20,
-            20
+            -200,
+            200
         );
+
+
         this.scene.add(this.orthographicCamera);
+        this.orthographicCamera.position.y = 18.5;
+        this.orthographicCamera.position.z = 50;
+        this.orthographicCamera.position.x = 0;
+        this.orthographicCamera.rotation.x = 1.9 * (Math.PI);
 
         this.orthographicHelper = new THREE.CameraHelper(this.orthographicCamera);
         this.scene.add(this.orthographicHelper);
 
         const size = 20;
         const divisions = 20;
+
         const gridHelper = new THREE.GridHelper(size, divisions);
         this.scene.add(gridHelper);
         const axesHelper = new THREE.AxesHelper(10);

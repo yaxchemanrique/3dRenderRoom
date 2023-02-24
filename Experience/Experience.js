@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-
+import { GUI } from 'dat.gui';
 import Sizes from './Utils/Sizes.js';
 import Time from './Utils/Time.js';
 import Resources from './Utils/Resources.js';
@@ -36,7 +36,6 @@ export default class Experience {
         this.time.on('update', () => {
             this.update();
         });
-
     }
 
     resize() {
@@ -44,8 +43,11 @@ export default class Experience {
         this.renderer.resize();
     }
 
+    
+
     update() {
         this.camera.update();
+        this.world.update();
         this.renderer.update();
         if(this.controls) {
             this.controls.update();
