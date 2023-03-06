@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import Experience from '../Experience.js';
 import Room from './Room.js';
+import Floor from './Floor.js';
 import Controls from './Controls.js';
 import Enviroment from './Enviroment.js';
 
@@ -16,6 +17,7 @@ export default class World {
         this.resources.on('ready', () => {
             this.enviroment = new Enviroment();
             this.room = new Room();
+            this.floor = new Floor();
             this.controls = new Controls();
         });
     }

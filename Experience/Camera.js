@@ -33,8 +33,8 @@ export default class Camera {
             (this.sizes.aspect * this.sizes.frustrum) / 2,
             this.sizes.frustrum / 2,
             -this.sizes.frustrum / 2,
-            -200,
-            200
+            -300,
+            300
         );
 
 
@@ -44,16 +44,16 @@ export default class Camera {
         this.orthographicCamera.position.x = 0;
         this.orthographicCamera.rotation.x = 1.9 * (Math.PI);
 
-        this.orthographicHelper = new THREE.CameraHelper(this.orthographicCamera);
-        this.scene.add(this.orthographicHelper);
+        // this.orthographicHelper = new THREE.CameraHelper(this.orthographicCamera);
+        // this.scene.add(this.orthographicHelper);
 
         const size = 20;
         const divisions = 20;
 
-        const gridHelper = new THREE.GridHelper(size, divisions);
-        this.scene.add(gridHelper);
-        const axesHelper = new THREE.AxesHelper(10);
-        this.scene.add(axesHelper);
+        // const gridHelper = new THREE.GridHelper(size, divisions);
+        // this.scene.add(gridHelper);
+        // const axesHelper = new THREE.AxesHelper(10);
+        // this.scene.add(axesHelper);
 
 
     }
@@ -79,9 +79,9 @@ export default class Camera {
         // console.log(this.perspectiveCamera.position);
         this.controls.update();
 
-        this.orthographicHelper.matrixWorldNeedsUpdate = true;
-        this.orthographicHelper.update();
-        this.orthographicHelper.position.copy(this.orthographicCamera.position);
-        this.orthographicHelper.rotation.copy(this.orthographicCamera.rotation);
+        // this.orthographicHelper.matrixWorldNeedsUpdate = true;
+        // this.orthographicHelper.update();
+        // this.orthographicHelper.position.copy(this.orthographicCamera.position);
+        // this.orthographicHelper.rotation.copy(this.orthographicCamera.rotation);
     }
 }
