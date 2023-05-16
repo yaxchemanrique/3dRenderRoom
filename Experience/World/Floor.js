@@ -3,7 +3,7 @@ import GSAP from 'gsap';
 import Experience from '../Experience.js'
 import { BackSide } from 'three';
 
-export default class Room {
+export default class Floor {
     constructor() {
         this.experience = new Experience();
         this.scene = this.experience.scene;

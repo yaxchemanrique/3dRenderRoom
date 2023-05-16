@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GUI } from 'dat.gui';
+
 import Sizes from './Utils/Sizes.js';
 import Time from './Utils/Time.js';
 import Resources from './Utils/Resources.js';

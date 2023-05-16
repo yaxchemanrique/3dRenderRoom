@@ -18,7 +18,7 @@ export default class World {
             this.enviroment = new Enviroment();
             this.room = new Room();
             this.floor = new Floor();
-            this.controls = new Controls();
+            // this.controls = new Controls();
         });
     }
 
